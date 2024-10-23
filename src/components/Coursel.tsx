@@ -18,11 +18,14 @@ interface CarouselProps {
 
 const Carousel = ({ items }: CarouselProps) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const carouselRef = useRef<any>(null);
-    const startX = useRef<any>(0);
-    const endX = useRef<any>(0);
+    const carouselRef = useRef(null);
+    const startX = useRef(0);
+    const endX = useRef(0);
     const [translateRate, setTranslateRate] = useState(33.33);
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [windowWidth, setWindowWidth] = useState<number>(0);
+    useEffect(() => {
+        setWindowWidth(window.innerWidth)
+    }, []);
     const handleResize = () => {
         setWindowWidth(window.innerWidth);
     };
@@ -41,6 +44,7 @@ const Carousel = ({ items }: CarouselProps) => {
         }
     }, [windowWidth])
 
+
     const nextSlide = () => {
         setCurrentIndex((prevIndex) =>
             prevIndex === items.length - 1 ? 0 : prevIndex + 1
@@ -53,20 +57,20 @@ const Carousel = ({ items }: CarouselProps) => {
         );
     };
 
-    const handleTouchStart = (e: any) => {
+    const handleTouchStart = (e: React.TouchEvent) => {
         startX.current = e.touches[0].clientX;
     };
 
-    const handleTouchEnd = (e: any) => {
+    const handleTouchEnd = (e: React.TouchEvent) => {
         endX.current = e.changedTouches[0].clientX;
         handleSwipe();
     };
 
-    const handleMouseDown = (e: any) => {
+    const handleMouseDown = (e: React.MouseEvent) => {
         startX.current = e.clientX;
     };
 
-    const handleMouseUp = (e: any) => {
+    const handleMouseUp = (e: React.MouseEvent) => {
         endX.current = e.clientX;
         handleSwipe();
     };

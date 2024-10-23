@@ -1,7 +1,7 @@
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import React from 'react'
 
-export default function ItemCard({ picture }: any) {
+export default function ItemCard({ picture }: { picture: StaticImageData }) {
     return (
         <div className='bg-quaternary border-[1px] rounded-md overflow-hidden border-quaternary text-white font-roboto shadow-shadowTwo select-none'>
             <Image src={picture} alt='image' className='w-full' />
