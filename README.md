@@ -1,6 +1,6 @@
 # Baykar Responsive Web
 
-This is a responsive web project built with Next.js, React, Tailwind CSS, and TypeScript. The project is optimized for handling responsive designs using the `react-responsive` library to handle media queries.
+This is a responsive web project built with Next.js, React, Tailwind CSS, and TypeScript.
 
 ## Live Demo
 
