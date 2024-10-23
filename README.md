@@ -11,7 +11,6 @@ You can view the live demo of the project here: [Baykar Responsive Web](https://
 - **Next.js**: The React framework for building server-side rendered applications.
 - **Tailwind CSS**: A utility-first CSS framework for designing responsive layouts.
 - **TypeScript**: Provides type safety in JavaScript for better development experience.
-- **React-Responsive**: A library for handling media queries in React.
 
 ## Installation
 
