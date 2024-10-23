@@ -1,13 +1,12 @@
 import Image from 'next/image'
 import React from 'react'
-import picture from '@/assets/Picture.png'
 
-export default function ItemCard() {
+export default function ItemCard({ picture }: any) {
     return (
-        <div className='bg-quaternary w-[395px] h-[472px] border-[1px] rounded-md overflow-hidden border-quaternary text-white font-roboto shadow-shadowTwo'>
-            <Image src={picture} width={0} height={0} alt='image' />
-            <div className='flex flex-col gap-4 px-8 pt-8'>
-                <span>Title</span>
+        <div className='bg-quaternary border-[1px] rounded-md overflow-hidden border-quaternary text-white font-roboto shadow-shadowTwo select-none'>
+            <Image src={picture} alt='image' className='w-full' />
+            <div className='flex flex-col gap-4 px-8 pt-8 font-roboto'>
+                <span className='text-2xl font-bold'>Title</span>
                 <span>Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse.</span>
             </div>
             <div className='flex gap-4 p-8 w-full'>
