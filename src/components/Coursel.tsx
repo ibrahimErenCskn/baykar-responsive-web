@@ -34,7 +34,7 @@ const Carousel = ({ items }: CarouselProps) => {
         };
     }, []);
     useEffect(() => {
-        if (windowWidth < 640) {
+        if (windowWidth < 1024) {
             setTranslateRate(100);
         } else {
             setTranslateRate(33.33);
@@ -100,7 +100,7 @@ const Carousel = ({ items }: CarouselProps) => {
                 {items.map((item) => (
                     <div
                         key={item.id}
-                        className={`w-full sm:w-1/3 h-[440px] sm:h-[600px] flex-shrink-0`}
+                        className={`w-full lg:w-1/3 h-[440px] sm:h-[600px] flex-shrink-0`}
                     >
                         <div className="min-w-[300px] w-full h-full flex justify-center flex-col text-2xl px-4 sm:p-8">
                             <div className="bg-white sm:h-[430px] w-[100%] sm:w-full rounded-[20px] border-[1px] shadow-courselShadowTwo p-8 gap-4 sm:gap-16 flex flex-col">
@@ -119,8 +119,8 @@ const Carousel = ({ items }: CarouselProps) => {
                                     <Image
                                         src={item.url || "https://i.hizliresim.com/nj2z82i.png"}
                                         alt="user thumb"
-                                        width={80}
-                                        height={80}
+                                        width={60}
+                                        height={60}
                                     />
                                     <div className="flex flex-col ml-4 overflow-hidden">
                                         <span className="text-lg">{item.name}</span>
@@ -136,7 +136,7 @@ const Carousel = ({ items }: CarouselProps) => {
                 <span className="absolute left-[14%] sm:left-20 top-0 translate-y-[-25%] font-bold sm:font-extrabold text-[32px] sm:text-[56px] text-center sm:text-left">Because they love us</span>
                 <div>
                     <button
-                        className="absolute right-36 top-0 invisible sm:visible transform border-2 border-tertiary rounded-full text-tertiary p-3 w-12 h-12 flex items-center justify-center"
+                        className="absolute right-36 top-0 invisible sm:visible transform border-2 border-tertiary rounded-full text-tertiary p-3 w-12 h-12 hidden lg:flex items-center justify-center"
                         onClick={prevSlide}
                     >
                         <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -145,7 +145,7 @@ const Carousel = ({ items }: CarouselProps) => {
                         </svg>
                     </button>
                     <button
-                        className="absolute right-16 top-0 invisible sm:visible transform border-2 border-tertiary rounded-full text-tertiary p-3 w-12 h-12 flex items-center justify-center"
+                        className="absolute right-16 top-0 invisible sm:visible transform border-2 border-tertiary rounded-full text-tertiary p-3 w-12 h-12 hidden lg:flex items-center justify-center"
                         onClick={nextSlide}
                     >
                         <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">

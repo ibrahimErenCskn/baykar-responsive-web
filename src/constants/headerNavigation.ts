@@ -4,7 +4,7 @@ import { HeaderNavigationProps } from "./constans";
 const headerNavigation: HeaderNavigationProps[] = [
     {
         name: 'Products',
-        href: '/'
+        href: '/products'
     },
     {
         name: 'Solutions',
