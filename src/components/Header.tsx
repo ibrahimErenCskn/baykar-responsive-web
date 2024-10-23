@@ -24,7 +24,7 @@ export default function Header() {
                 <span className='text-3xl font-roboto text-tertiary font-bold'>
                     Collers
                 </span>
-                <div className='hidden sm:flex cursor-pointer select-none gap-4 items-center'>
+                <div className='hidden xl:flex cursor-pointer select-none gap-4 items-center'>
                     {headerNavigation.map((item, index) => (
                         <Link href={item.href} key={index} className='font-roboto text-tertiary py-2 px-3 font-medium'>
                             {item.name}
@@ -32,7 +32,7 @@ export default function Header() {
                     ))}
                     <SignUpButton type='primary' />
                 </div>
-                <div className='flex sm:hidden cursor-pointer' onClick={() => setIsOpen(!isOpen)}>
+                <div className='flex xl:hidden cursor-pointer' onClick={() => setIsOpen(!isOpen)}>
                     <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M21 5.5H13" stroke="#78350F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                         <path d="M21 12.5H8" stroke="#78350F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
